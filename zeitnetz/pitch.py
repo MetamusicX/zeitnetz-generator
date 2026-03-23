@@ -26,7 +26,9 @@ def pc_name(pc):
 
 def parse_pitch_input(s):
     """Parse a string of 12 pitch classes (integers 0–11 or German names).
+    Accepts space- or comma-separated values.
     Returns a list of 12 integers. Raises ValueError on bad input."""
+    s = s.replace(",", " ")
     tokens = s.strip().split()
     if len(tokens) != 12:
         raise ValueError(f"Pitch row must have 12 values, got {len(tokens)}")
@@ -49,7 +51,8 @@ def parse_pitch_input(s):
 
 
 def parse_int_list(s, expected, name):
-    """Parse a space-separated string of integers."""
+    """Parse a space- or comma-separated string of integers."""
+    s = s.replace(",", " ")
     tokens = s.strip().split()
     if len(tokens) != expected:
         raise ValueError(f"{name} must have {expected} values, got {len(tokens)}")
