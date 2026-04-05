@@ -1,6 +1,6 @@
 # Zeitnetz Generator
 
-A generalized algorithmic time-grid generator for music composition, based on the system used by Helmut Lachenmann in *Mouvement (– vor der Erstarrung)* as analyzed by Luís Antunes Pena.
+A generalized algorithmic time-grid generator for music composition, based on the system used by Helmut Lachenmann in *Mouvement (– vor der Erstarrung)*.
 
 The generator takes a **12-tone row**, **permutation pattern**, and **duration list** as input and produces a complete multi-stage compositional scaffold as MusicXML scores.
 
